@@ -67,12 +67,19 @@ Open the project:
 Simply open index.html in any modern web browser, or use a live server extension (like Live Server for VS Code) for the best development experience.
 
 📁 File Structure
+
 Plaintext
+
 ├── index.html       # Main HTML document & embedded Tailwind config
+
 ├── style.css        # Custom CSS for specific animations (scroll lines, etc.)
+
 ├── script.js        # Logic for preloader and scroll interactions
+
 ├── Images/          # SVG logos and static assets
+
 └── Videos/          # Ambient background media (e.g., hero background)
+
 💡 Note on Design Philosophy
 "完成とは、足すことではなく、残された余白にこそある."
 (Perfection is found not in adding, but in the negative space left behind.)
