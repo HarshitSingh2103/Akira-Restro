@@ -56,7 +56,7 @@ Since this project relies on vanilla HTML/CSS/JS with a Tailwind CDN, there is n
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/HarshitSingh2103/Akira-Japanese-Editorial-Minimalist-Restaurant-Landing-Page.git](https://github.com/HarshitSingh2103/Akira-Japanese-Editorial-Minimalist-Restaurant-Landing-Page.git)
+   git clone [https://github.com/HarshitSingh2103/Akira-Japanese-Editorial-Minimalist-Restaurant-Landing-Page.git]
 Navigate to the directory:
 
 Bash
