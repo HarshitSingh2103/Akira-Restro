@@ -55,8 +55,7 @@ Custom-configured in Tailwind to reflect natural, organic materials:
 Since this project relies on vanilla HTML/CSS/JS with a Tailwind CDN, there is no complex build process required to view it.
 
 1. **Clone the repository:**
-   ```bash
-  https://github.com/HarshitSingh2103/Akira-Japanese-Editorial-Minimalist-Restaurant-Landing-Page.git
+   ```bash (https://github.com/HarshitSingh2103/Akira-Japanese-Editorial-Minimalist-Restaurant-Landing-Page.git)
 
    
 Navigate to the directory:
