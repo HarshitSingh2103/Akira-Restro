@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumi-e Minimalist | Omakase</title>
+    <link rel="icon" type="image/png" href="./Images/Cusp_logo-1.svg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500;1,600&family=Montserrat:wght@300;400&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sumi: '#1c1a17',
+                        washi: '#f3ebd9',
+                        surface: '#ffffff',
+                        bodytext: '#3a352f',
+                        muted: '#d9d0be',
+                        hanko: '#8c2111',
+                    },
+                    fontFamily: {
+                        jp: ['"Noto Serif JP"', 'serif'],
+                        en: ['"Cormorant Garamond"', 'serif'],
+                        mono: ['Montserrat', 'sans-serif'],
+                    },
+                    spacing: {
+                        'sm': '24px',
+                        'md': '64px',
+                        'lg': '120px',
+                        'xl': '240px',
+                    },
+                    borderRadius: {
+                        DEFAULT: '0px',
+                        none: '0px',
+                        sm: '0px',
+                        md: '0px',
+                        lg: '0px',
+                        xl: '0px',
+                        '2xl': '0px',
+                        '3xl': '0px',
+                        full: '0px',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-washi text-bodytext font-en antialiased overflow-x-hidden selection:bg-hanko selection:text-washi">
+
+    <!-- Grain Overlay -->
+    <div class="fixed inset-0 pointer-events-none z-[110] opacity-[0.04] mix-blend-multiply" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-[100] flex flex-col items-center justify-center pointer-events-auto">
+        <!-- Preloader Backgrounds for Split Reveal -->
+        <div class="preloader-left absolute top-0 left-0 w-1/2 h-full bg-washi z-0 transition-transform duration-[1200ms] ease-[cubic-bezier(0.85,0,0.15,1)]"></div>
+        <div class="preloader-right absolute top-0 right-0 w-1/2 h-full bg-washi z-0 transition-transform duration-[1200ms] ease-[cubic-bezier(0.85,0,0.15,1)]"></div>
+        
+        <!-- Content -->
+        <div class="preloader-content z-10 flex flex-col items-center justify-center transition-all duration-[800ms] ease-[cubic-bezier(0.85,0,0.15,1)]">
+            <div class="enso-circle w-[64px] h-[64px] rounded-full border-2 border-sumi mb-8 opacity-30"></div>
+            <div class="text-sumi font-jp text-[24px] tracking-[0.5em] vertical-rl">一期一会</div>
+        </div>
+    </div>
+
+    <!-- Left Sidebar (Fixed) -->
+    <aside class="fixed top-0 left-0 w-[10%] h-screen bg-sumi text-washi flex flex-col items-center justify-center z-[80] border-r border-sumi">
+        <nav class="flex flex-col gap-6 items-upward-facing">
+            <a href="#menu" class="vertical-rl font-mono text-[12px] uppercase tracking-[0.1em] hover:text-hanko hover:-translate-y-1 transition-all duration-300">MENU</a>
+            <a href="#philosophy" class="vertical-rl font-mono text-[12px] uppercase tracking-[0.1em] hover:text-hanko hover:-translate-y-1 transition-all duration-300">PHILOSOPHY</a>
+            <a href="#reserve" class="vertical-rl font-mono text-[12px] uppercase tracking-[0.1em] hover:text-hanko hover:-translate-y-1 transition-all duration-300">RESERVE</a>
+        </nav>
+        <div class="absolute bottom-12 flex flex-col items-center gap-4">
+            <span class="vertical-rl font-mono text-[10px] uppercase tracking-[0.2em] text-muted">SCROLL</span>
+            <div class="w-[1px] h-[60px] bg-sumi overflow-hidden relative">
+                <div class="w-full h-full bg-washi scroll-line-anim absolute top-[-100%] left-0"></div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper (80% width) -->
+    <div class="w-[90%] ml-auto relative bg-transparent bg-surface">
+        
+        <!-- Hero Section -->
+        <section class="h-screen w-full relative overflow-hidden bg-sumi" id="hero">
+            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-100 " id="hero-video">
+                <!-- Fallback to a serene ink/steam video -->
+                <source src="./Videos/0_Space_Galaxy_3840x2160.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-washi opacity-10"></div>
+            
+            <div class="absolute bottom-16 right-16 flex items-end reveal-y delay-300">
+                <h1 class="font-en italic text-surface text-[64px] font-medium leading-none z-20 mr-[+1rem] mb-8 relative drop-shadow-md">AKIRA</h1>
+                <h2 class="font-jp text-[120px] text-surface opacity-90 vertical-rl font-light leading-none drop-shadow-lg">明</h2>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section id="philosophy" class="pt-[240px] pb-lg px-24 relative max-w-[1200px] mx-auto">
+            <div class="grid grid-cols-12 gap-8 items-start">
+                
+                <div class="col-span-12 md:col-span-10 md:col-start-3 mb-[240px] reveal-y">
+                    <blockquote class="font-en italic text-[64px] leading-[1.1] text-sumi relative">
+                        "完成とは、足すことではなく、残された余白にこそある."
+                        <svg class="w-12 h-12 inline-block ml-4 text-hanko fill-current translate-y-[-10px]" viewBox="0 0 100 100">
+                            <rect width="100" height="100" fill="currentColor"/>
+                            <text x="50" y="72" font-family="'Noto Serif JP', serif" font-size="65" text-anchor="middle" fill="#f3ebd9">明</text>
+                        </svg>
+                    </blockquote>
+                </div>
+
+                <div class="col-span-12 md:col-span-5 relative reveal-y delay-100">
+                    <div class="relative w-full max-w-[400px]">
+                        <div class="absolute inset-0 border border-sumi translate-x-[16px] translate-y-[16px] z-0"></div>
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=800&auto=format&fit=crop&grayscale=true" alt="Chef preparing meal" class="relative z-10 w-full h-[500px] object-cover filter grayscale contrast-125">
+                    </div>
+                </div>
+
+                <div class="col-span-12 md:col-span-5 md:col-start-8 mt-32 reveal-y delay-200">
+                    <div class="max-w-[320px]">
+                        <h3 class="font-mono text-[12px] tracking-[0.2em] text-sumi mb-8 uppercase border-b border-muted pb-4">The Craft</h3>
+                        <p class="mb-8 text-[18px] leading-[1.8] text-bodytext">素材本来の持ち味を引き出すため、私たちは余計なものを削ぎ落とします。私たちの根幹にあるのは「間」の美学。物事のあいだにある空間、それこそが期待を膨らませ、味わいを響かせる場所なのです。</p>
+                        <p class="text-[18px] leading-[1.8] text-bodytext">毎朝、静寂に包まれた京都の市場や、北海道の荒々しくも豊かな海岸から食材を仕入れています。それは、自然の恵みと向き合う日々の瞑想なのです。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Omakase Menu Section -->
+        <section id="menu" class="py-[240px] relative w-full flex items-center justify-center border-t border-muted">
+            <!-- Vertical Section Title -->
+            <div class="absolute left-16 top-[240px] reveal-y">
+                <h2 class="vertical-rl font-jp text-[48px] text-sumi font-light tracking-[0.2em]">お任せ</h2>
+                <span class="vertical-rl font-mono text-[12px] tracking-[0.2em] text-muted mt-8 uppercase">Omakase</span>
+            </div>
+
+            <div class="w-full max-w-[800px] ml-32 border border-muted bg-surface reveal-y delay-200 shadow-sm">
+                <!-- Course 1 -->
+                <div class="group border-b border-muted p-12 flex justify-between items-center transition-colors duration-500 hover:bg-washi cursor-default">
+                    <div class="flex items-start gap-8">
+                        <span class="font-mono text-hanko text-[14px] pt-1">I</span>
+                        <div>
+                            <h4 class="font-jp text-[24px] text-sumi mb-2">向付</h4>
+                            <p class="font-en text-[18px] italic text-bodytext">Sashimi of the day, freshly grated wasabi</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 2 -->
+                <div class="group border-b border-muted p-12 flex justify-between items-center transition-colors duration-500 hover:bg-washi cursor-default">
+                    <div class="flex items-start gap-8">
+                        <span class="font-mono text-hanko text-[14px] pt-1">II</span>
+                        <div>
+                            <h4 class="font-jp text-[24px] text-sumi mb-2">椀物</h4>
+                            <p class="font-en text-[18px] italic text-bodytext">Clear soup, sea bream, yuzu</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 3 -->
+                <div class="group border-b border-muted p-12 flex justify-between items-center transition-colors duration-500 hover:bg-washi cursor-default">
+                    <div class="flex items-start gap-8">
+                        <span class="font-mono text-hanko text-[14px] pt-1">III</span>
+                        <div>
+                            <h4 class="font-jp text-[24px] text-sumi mb-2">焼物</h4>
+                            <p class="font-en text-[18px] italic text-bodytext">Charcoal-grilled Wagyu, sansho pepper</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 4 -->
+                <div class="group p-12 flex justify-between items-center transition-colors duration-500 hover:bg-washi cursor-default">
+                    <div class="flex items-start gap-8">
+                        <span class="font-mono text-hanko text-[14px] pt-1">IV</span>
+                        <div>
+                            <h4 class="font-jp text-[24px] text-sumi mb-2">甘味</h4>
+                            <p class="font-en text-[18px] italic text-bodytext">Matcha, seasonal wagashi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation & Footer Section -->
+        <section id="reserve" class="w-full flex flex-col lg:flex-row border-t border-sumi bg-washi">
+            <!-- Left: Booking -->
+            <div class="w-full lg:w-1/2 p-16 xl:p-24 border-r border-sumi reveal-y">
+                <h2 class="font-en text-[40px] text-sumi mb-16 italic font-medium">Secure a Table</h2>
+                <form class="flex flex-col gap-8">
+                    <div class="relative">
+                        <input type="text" placeholder="NAME" class="w-full h-[56px] bg-transparent border-b-2 border-sumi font-mono text-[16px] placeholder-muted focus:outline-none focus:border-hanko transition-colors duration-300 pb-2 text-sumi rounded-none">
+                    </div>
+                    <div class="flex gap-8">
+                        <div class="relative w-1/2">
+                            <input type="date" class="w-full h-[56px] bg-transparent border-b-2 border-sumi font-mono text-[16px] placeholder-muted focus:outline-none focus:border-hanko transition-colors duration-300 pb-2 text-sumi rounded-none custom-date">
+                        </div>
+                        <div class="relative w-1/2">
+                            <input type="number" placeholder="GUESTS" min="1" max="6" class="w-full h-[56px] bg-transparent border-b-2 border-sumi font-mono text-[16px] placeholder-muted focus:outline-none focus:border-hanko transition-colors duration-300 pb-2 text-sumi rounded-none">
+                        </div>
+                    </div>
+                    <button type="button" class="w-full bg-sumi text-washi font-mono text-[14px] tracking-[0.15em] uppercase py-6 mt-8 hover:bg-hanko hover:tracking-[0.25em] transition-all duration-300 ease-out cursor-pointer rounded-none border-none">
+                        Request Reservation
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right: Info -->
+            <div class="w-full lg:w-1/2 p-16 xl:p-24 bg-sumi text-washi flex flex-col justify-between reveal-y delay-200">
+                <div class="flex gap-16 h-full items-start">
+                    <!-- Vertical Address -->
+                    <address class="vertical-rl font-jp text-[18px] font-light leading-[2.5] not-italic opacity-80 tracking-widest">
+                        京都市東山区<br>
+                        祇園町南側 ５７０<br>
+                        日本
+                    </address>
+                    <div class="gap-4 vertical-rr font-en text-[20px] italic opacity-60 ml-10 mt-40 tracking-[-0.10rem]">
+                        123 Hidden Alley, Gion, Kyoto
+                    </div>
+                </div>
+                
+                <div class="flex flex-col justify-end text-right mt-16">
+                    <div class="mb-12">
+                        <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-muted mb-4 opacity-70">Dinner Service</p>
+                        <p class="font-en text-[20px] mb-1">18:00 — 23:00</p>
+                        <p class="font-en text-[18px] italic opacity-50">Closed on Sundays</p>
+                    </div>
+                    <div>
+                        <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-muted mb-4 opacity-70">Inquiries</p>
+                        <p class="font-en text-[20px] mb-1">ilusingh3442@gmail.com</p>
+                        <p class="font-en text-[20px]">+91-8109055117</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
