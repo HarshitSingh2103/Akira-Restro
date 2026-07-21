@@ -45,28 +45,26 @@ Custom-configured in Tailwind to reflect natural, organic materials:
 
 *   **HTML5**: Semantic markup structuring.
 *   **Tailwind CSS**: Handled via CDN with heavily customized theme configurations embedded directly in the `<head>`.
-*   **Vanilla JavaScript**: For preloader animations and scroll effects (handled in `script.js`).
+*   **Vanilla JavaScript**: For preloader animations and scroll effects.
 *   **Google Fonts**: Serving typography globally.
 
 ---
 
 ## 🛠️ Installation & Setup
 
-Since this project relies on vanilla HTML/CSS/JS with a Tailwind CDN, there is no complex build process required to view it.
+Since this project relies on vanilla HTML/CSS/JS with a Tailwind CDN, there is no complex build process required to view it locally.
 
 1. **Clone the repository:**
-   ```bash (https://github.com/HarshitSingh2103/Akira-Japanese-Editorial-Minimalist-Restaurant-Landing-Page.git)
-
-   
+   ```bash
+   git clone [https://github.com/HarshitSingh2103/Akira-Japanese-Editorial-Minimalist-Restaurant-Landing-Page.git](https://github.com/HarshitSingh2103/Akira-Japanese-Editorial-Minimalist-Restaurant-Landing-Page.git)
 Navigate to the directory:
 
 Bash
-cd akira-omakase
+cd Akira-Japanese-Editorial-Minimalist-Restaurant-Landing-Page
 Open the project:
 Simply open index.html in any modern web browser, or use a live server extension (like Live Server for VS Code) for the best development experience.
 
 📁 File Structure
-
 Plaintext
 
 ├── index.html       # Main HTML document & embedded Tailwind config
@@ -84,3 +82,6 @@ Plaintext
 (Perfection is found not in adding, but in the negative space left behind.)
 
 This project intentionally uses extreme margins (mb-[240px], pt-[240px]) and minimal UI elements to let the content breathe.
+
+📄 License
+This project is open-source and available under the MIT License.
